@@ -2,30 +2,140 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magnifico Lanches</title>
   <link href="./styles/output.css" rel="stylesheet">
+  <!-- Adicionando Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<div class="bg-gray-100 text-sm text-gray-700 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 py-1 flex justify-end items-center space-x-6">
-    <a href="#" class="flex items-center hover:text-blue-600 transition-colors">
-      🛒 <span class="ml-1">Carrinho</span>
-    </a>
-    <a href="#" class="flex items-center hover:text-blue-600 transition-colors">
-      🔐 <span class="ml-1">Login</span>
-    </a>
+<body class="bg-white">
+  <!-- Barra superior -->
+ <div class="bg-gray-100 text-sm text-gray-700 shadow-sm sticky top-0 z-50"> 
+    <div class="max-w-7xl mx-auto px-4 py-1 flex justify-end items-center space-x-6">
+      <a href="#" class="flex items-center hover:text-blue-600 transition-colors">
+        <i class="ph ph-shopping-cart"></i>
+        <span class="ml-1">Carrinho</span>
+      </a>
+      <a href="#" class="flex items-center hover:text-blue-600 transition-colors">
+        <i class="ph ph-lock"></i>
+        <span class="ml-1">Login</span>
+      </a>
+    </div>
   </div>
-</div>
-  <body class="">
-  </body>
-    <header class="w-full h-[420px] bg-zinc-900">
-      <div>
-        <img
-          src="C:\Users\Jm\Desktop\projetos\assets\logo.png"
-          alt="Logo magnifico"
-          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
-          />
+
+  <!-- Menu de Navegação -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex space-x-8">
+        <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Início</a>
+        <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Cardápio</a>
+        <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Promoções</a>
+        <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Sobre Nós</a>
       </div>
-    </header>
-  </div>
+      <div class="hidden md:block">
+        <a href="#" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full font-medium transition-colors">
+          Peça Online
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header com logo e CTA -->
+  <header class="w-full h-64 md:h-[420px] bg-zinc-900 flex flex-col justify-center items-center relative">
+    <div class="text-center">
+      <img
+        src="./assets/logo.png"
+        alt="Logo Magnifico Lanches"
+        class="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg hover:scale-110 duration-200 mx-auto mb-6"
+      />
+      <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Magnifico Lanches</h1>
+      <p class="text-gray-300 mb-8 max-w-md mx-auto">Os melhores lanches da região, Se surprienda com um sabor Magnifico.</p>
+      <a href="#cardapio" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold text-lg transition-colors shadow-lg">
+        Ver Cardápio
+      </a>
+    </div>
+  </header>
+
+  <!-- Seção de Lanches (exemplo) -->
+  <section id="cardapio" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Mais vendidos</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Item 1 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <img src="C:\Users\Jm\Desktop\projetos\magnificolanches\assets\magrelinho IA.png" alt="Hambúrguer" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Classico</h3>
+          <p class="text-gray-600 mb-4">Pão brioche, blend 120g, queijo, tomate, alface, cebola e bastante molho billy & jack.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-amber-600">R$ 24,99</span>
+            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full transition-colors">
+              <i class="ph ph-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <img src="C:\Users\Jm\Desktop\projetos\magnificolanches\assets\cheddar monstro IA.png" alt="Hambúrguer" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Cheddar Magnifico</h3>
+          <p class="text-gray-600 mb-4">Pão brioche, 2 blend 120g, cheddar, cebola caramelizada.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-amber-600">R$ 29,99</span>
+            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full transition-colors">
+              <i class="ph ph-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <img src="C:\Users\Jm\Desktop\projetos\magnificolanches\assets\Calabresa Bbq IA.png" alt="Hambúrguer" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Calabresa BBQ</h3>
+          <p class="text-gray-600 mb-4">Pão, blend 120g aprox. Alface, cebola, caprichado na calabresa e molho barbecue.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-amber-600">R$ 26,99</span>
+            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full transition-colors">
+              <i class="ph ph-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-zinc-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Magnífico Lanches</h3>
+        <p class="text-gray-400">Tijuca, Teresopolis</p>
+        <p class="text-gray-400">(21) 983654944</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Horário de Funcionamento</h3>
+        <p class="text-gray-400">Seg-Sex: 11h às 23h</p>
+        <p class="text-gray-400">Sáb-Dom: 12h às 00h</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="ph ph-facebook-logo text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="ph ph-instagram-logo text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="ph ph-whatsapp-logo text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
